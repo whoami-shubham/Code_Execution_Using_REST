@@ -1,0 +1,31 @@
+{% include "header.html" %}
+
+
+ <div class="container">
+     <div class="col-12">
+            <center><h1> Hello World !</h1></center>
+            <form method="POST" action="/" >
+               <select name="lang">
+                      <option value="c">c</option>
+                      <option value="cpp">c++</option>
+                      <option value="java">java</option>
+                      <option value="py">python</option>
+               </select><br/>
+               <textarea class="form-control" name="code" rows="13" cols="50"></textarea>
+               <input class="form-control" type="text" name="input" >
+               <button class="btn btn-primary">run</button>
+            </form>
+            {% if flag===true %}
+            <div >
+                <p>{{lang}}</p>
+                <pre>
+                        {{output}}
+                </pre>
+            </div>
+            {% endif %}
+
+     </div>
+
+ </div>
+
+{% include "footer.html" %}
